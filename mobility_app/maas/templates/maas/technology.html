@@ -1,0 +1,14 @@
+
+
+
+{% for categories in category_list %}
+{{categories|linebreaks}}
+
+{% for attribute in attribute_list %}
+  {% if attribute.category == categories %}
+    {{attribute}}
+  {% endif %}
+
+{% endfor %}
+{% endfor %}
+
